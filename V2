@@ -1,0 +1,39 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "EL5's Hub",
+   LoadingTitle = "EL5's Hub",
+   LoadingSubtitle = "by .jomr1",
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "EL5's Hub"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "XYX8KQM9nE", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "EL5's Hub | Key System",
+      Subtitle = "Get Key In Discord.",
+      Note = "Join Discord Server From Misc Tab.",
+      FileName = "EL5's Hub Key System", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"EL5IsSigma"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local MainTab = Window:CreateTab("🏠 Home", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Lock")
+
+Rayfield:Notify("Thanks for using EL5's Hub Free!", "discord.gg/XYX8KQM9nE", 472385)
+
+local Button = MainTab:CreateButton({
+   Name = "AimLock",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/HolyRevolution/V/618df28c1ac8aef54d730e2cc1f5551a158eba9e/Script"))
+   end,
+})
